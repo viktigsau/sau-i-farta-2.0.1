@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sau i farta - navn og nommer</title>
+    <link rel="shortcut icon" href="bilder/sau i farta.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/sticyheader.css">
+    <link rel="stylesheet" href="style/navn&numer.css">
+    <link rel="stylesheet" href="style/contactinfo.css">
+    <script src="javascript/navn&numer.js"></script>
+    <script>const left = "/index.html"; const right = "/events.html";</script>
+    <script src="javascript/scroll.js"></script>
+</head>
+<body>
+    <header class="sticky-header">
+        <div class="sticky-header-sub">
+            <div id="LogoName">
+                <img src="bilder/sau i farta.png" id="logo" alt="sau i farta">
+                <h2 id="name">sau i farta</h2>
+            </div>
+
+            <a href="index.html"><button class="tabButton">
+                <h2>hjem</h2>
+            </button></a>
+            
+            <a href="navn&numer.html"><button class="tabButton" style="border-color: #FFD153;">
+                <h2>navn og nummer</h2>
+            </button></a>
+            
+
+            <a href="events.html"><button class="tabButton">
+                <h2>arrangemanger</h2>
+            </button></a>
+
+            <a href="spill.html"><button class="tabButton">
+                <h2>spill</h2>
+            </button></a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div id="help">
+            <h2>hvordan å bruke</h2>
+            skriv inn et nommer eller navn i felted det står 🐑🐑 og trykk på søk
+        </div>
+        <div class="center">
+            <input id="in" type="text" value="" placeholder="🐑🐑">
+            <button onclick="run()" id="run">søk</button>
+            <div id="output"></div>
+        </div>
+
+        <div id="hvordanfungerernommera">
+            <h2>hva betyr nommeret til en sau?</h2>
+            De to første sifferene representerer det siste sifferet i året sauen ble født for exempel de to førse i 33004 er 33 altså 2023 men det kan også bety 2013 men grunnen til att det ikke har noe og si er det an en sau lever somregel ikke mer en 8 år. resten er hvor tidlig sauen ble født for exempel 33004 er nommer 4 til og bli født.
+        </div>
+
+        <div id="navnNom"></div>
+        
+
+        <div class="contactinfo">
+            <div class="contactinfoSub">🐑epost:<a href="mailto:sau.i.farta.m@gmail.com?subject=&amp;body=" target="_blank">sau.i.farta.m@gmail.com</a></div>
+            <div class="contactinfoSub">🐑youtube:<a href="https://www.youtube.com/@sau_i_farta" target="_blank">sau i farta</a></div>
+            <div class="contactinfoSub">🐑instagram:<a href="https://www.instagram.com/sau_i_farta?igsh=NnEyZWpsank0bjd6&utm_source=qr" target="_blank">sau_i_farta</a></div>
+        </div>
+    </div>
+    <script>document.addEventListener("DOMContentLoaded", function() {render("navnNom")});</script>
+</body>
+</html>

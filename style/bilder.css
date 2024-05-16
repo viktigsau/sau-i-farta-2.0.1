@@ -1,0 +1,26 @@
+.img{
+    width: 100vw;
+    max-width: 40vh;
+    max-height: 100vh;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 20px;
+    border-style: solid;
+}
+
+.imgHolder{
+    background-color: #1cc65d;
+    width: min-content;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: black;
+    border-width: 2px;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 5vh;
+}
