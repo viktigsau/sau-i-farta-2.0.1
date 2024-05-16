@@ -1,23 +1,23 @@
-const miniGame = {
+const game = {
     player: {
         pos: 0,
     },
 
     food: {
         spawnFood: function(vh, vw) {
-            miniGame.ranInterval = Math.floor(Math.random()*(vw*100-vh*10));
-            miniGame.food.lastId+=1;
-            const id = miniGame.food.lastId;
-            miniGame.food.food.push({pos: {x: Math.floor(Math.random()*(vw*100-vh*10)), y: -vh*6}, id: id});
+            game.ranInterval = Math.floor(Math.random()*(vw*100-vh*10));
+            game.food.lastId+=1;
+            const id = game.food.lastId;
+            game.food.food.push({pos: {x: Math.floor(Math.random()*(vw*100-vh*10)), y: -vh*6}, id: id});
             const food = document.createElement("div");
             food.classList.add("food");
             food.id = id;
-            food.style.left = miniGame.food.food[miniGame.food.food.length-1].pos.x + "px";
+            food.style.left = game.food.food[game.food.food.length-1].pos.x + "px";
             document.body.appendChild(food);
         },
         tuchesPlayer: function(vw, vh, id) {
-            const playerPos = miniGame.player.pos;
-            const foodPosition = miniGame.food.food[id].pos.x - playerPos;
+            const playerPos = game.player.pos;
+            const foodPosition = game.food.food[id].pos.x - playerPos;
             if (foodPosition < 10*vh && foodPosition > -5*vh) {
                 return true;
             };
@@ -33,42 +33,42 @@ const miniGame = {
     },
 
     onTick: function() {
-        miniGame.tick++;
+        game.tick++;
         const vw = window.innerWidth/100;
         const vh = window.innerHeight/100;
 
-        if (miniGame.tick%(miniGame.diff+miniGame.ranInterval) == 0) {
-            miniGame.food.spawnFood(vh, vw);
-            miniGame.diff -= Math.floor(1000/miniGame.diff)
-            if (miniGame.diff < 200) {miniGame.diff == 100;};
+        if (game.tick%(game.diff+game.ranInterval) == 0) {
+            game.food.spawnFood(vh, vw);
+            game.diff -= Math.floor(1000/game.diff)
+            if (game.diff < 200) {game.diff == 100;};
         };
 
-        miniGame.player.pos = miniGame.mouse.x-vh*5
-        document.getElementById("player").style.left = (miniGame.player.pos) + "px";
+        game.player.pos = game.mouse.x-vh*5
+        document.getElementById("player").style.left = (game.player.pos) + "px";
 
         const idsToremove = [];
 
-        for (let i = 0; i < miniGame.food.food.length; i++) {
-            if (miniGame.food.food[i].pos.y > vh*100 && !(miniGame.debug && miniGame.debugLevel == 1)) {
-                miniGame.miniGameOver();
-            }else if (miniGame.food.food[i].pos.y > vh*100 && miniGame.debug && miniGame.debugLevel == 1) {
-                document.getElementById(miniGame.food.food[i].id).remove()
+        for (let i = 0; i < game.food.food.length; i++) {
+            if (game.food.food[i].pos.y > vh*100 && !(game.debug && game.debugLevel == 1)) {
+                game.gameOver();
+            }else if (game.food.food[i].pos.y > vh*100 && game.debug && game.debugLevel == 1) {
+                document.getElementById(game.food.food[i].id).remove()
                 idsToremove.push(i);
-            }else if (miniGame.food.food[i].pos.y > vh*90 && miniGame.food.tuchesPlayer(vw, vh, i)) {
-                miniGame.score+=1;
-                document.getElementById(miniGame.food.food[i].id).remove()
+            }else if (game.food.food[i].pos.y > vh*90 && game.food.tuchesPlayer(vw, vh, i)) {
+                game.score+=1;
+                document.getElementById(game.food.food[i].id).remove()
                 idsToremove.push(i);
             }else{
-                miniGame.food.food[i].pos.y+=miniGame.food.speed;
-                document.getElementById(miniGame.food.food[i].id).style.top = miniGame.food.food[i].pos.y + "px";
+                game.food.food[i].pos.y+=game.food.speed;
+                document.getElementById(game.food.food[i].id).style.top = game.food.food[i].pos.y + "px";
             };
         };
 
         for (let i = 0; i < idsToremove.length; i++) {
-            miniGame.food.food.splice(idsToremove[i], 1)
+            game.food.food.splice(idsToremove[i], 1)
         };
 
-        if (miniGame.debug) {document.getElementById("debug").innerText = "vw: " + vw + ", vh: " + vh + ", tick: " + miniGame.tick + ", foods: " + miniGame.food.food.length + ", score: " + miniGame.score + ", diff: " + miniGame.diff + ", ranInterval: " + miniGame.ranInterval;};
+        if (game.debug) {document.getElementById("debug").innerText = "vw: " + vw + ", vh: " + vh + ", tick: " + game.tick + ", foods: " + game.food.food.length + ", score: " + game.score + ", diff: " + game.diff + ", ranInterval: " + game.ranInterval;};
     },
 
     onLoad: function() {
@@ -82,20 +82,20 @@ const miniGame = {
             document.getElementById("score").innerText = "din score: " + varibles[0].split("=")[1] + ", high score: " + localStorage.getItem("highScore");
         };
 
-        miniGame.ranInterval = Math.floor(Math.random()*((vw*10+vh*10)/2))
+        game.ranInterval = Math.floor(Math.random()*((vw*10+vh*10)/2))
 
         if (window.location.origin == "https://sauifarta.com") {
-            miniGame.debug = false;
-            miniGame.debugLevel = 0;
+            game.debug = false;
+            game.debugLevel = 0;
         };
 
         document.getElementById("startscreen").showModal();
     },
 
-    miniGameOver: function() {
-        clearInterval(miniGame.interval);
-        if (miniGame.score > localStorage.getItem("highScore")) {localStorage.setItem("highScore", miniGame.score);};
-        window.location.search = "?score=" + miniGame.score;
+    gameOver: function() {
+        clearInterval(game.interval);
+        if (game.score > localStorage.getItem("highScore")) {localStorage.setItem("highScore", game.score);};
+        window.location.search = "?score=" + game.score
     },
 
     settings: function() {
@@ -109,9 +109,9 @@ const miniGame = {
     },
 
     start: function() {
-        miniGame.diff = document.getElementById("diff").value;
+        game.diff = document.getElementById("diff").value;
         document.getElementById("startscreen").close();
-        miniGame.interval = setInterval(miniGame.onTick, Math.round(1000/miniGame.fps));
+        game.interval = setInterval(game.onTick, Math.round(1000/game.fps));
     },
 
     fps: 1000,
@@ -124,6 +124,6 @@ const miniGame = {
     ranInterval: null,
 };
 
-document.addEventListener("DOMContentLoaded", (event) => {miniGame.onLoad();});
-document.addEventListener("mousemove", (event) => {miniGame.mouse.x = event.clientX;});
-document.addEventListener("touchmove", (event) => {miniGame.mouse.x = event.touches[0].clientX;});
+document.addEventListener("DOMContentLoaded", (event) => {game.onLoad();});
+document.addEventListener("mousemove", (event) => {game.mouse.x = event.clientX;});
+document.addEventListener("touchmove", (event) => {game.mouse.x = event.touches[0].clientX;});
