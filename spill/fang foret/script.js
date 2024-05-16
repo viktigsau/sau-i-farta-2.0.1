@@ -95,7 +95,7 @@ const game = {
     gameOver: function() {
         clearInterval(game.interval);
         if (game.score > localStorage.getItem("highScore")) {localStorage.setItem("highScore", game.score);};
-        window.location.search = "?score=" + game.score
+        window.location.search = "?score=" + game.score + "&full=" + window.location.search.substring(1).split("&")[1].split("=")[0] == "full" && varibles[0].split("=")[1] == "true";
     },
 
     settings: function() {
@@ -112,6 +112,14 @@ const game = {
         game.diff = document.getElementById("diff").value;
         document.getElementById("startscreen").close();
         game.interval = setInterval(game.onTick, Math.round(1000/game.fps));
+    },
+
+    back: function() {
+        const varibles = window.location.search.substring(1).split("&");
+        value = varibles[1].split("=")[0] == "full" && varibles[1].split("=")[1] == "true";
+        if (value) {
+            window.location.href = "../../spill.html";
+        };
     },
 
     fps: 1000,
