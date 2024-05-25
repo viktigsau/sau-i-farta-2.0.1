@@ -94,8 +94,9 @@ const game = {
 
     gameOver: function() {
         clearInterval(game.interval);
+        const varibles = window.location.search.substring(1).split("&");
         if (game.score > localStorage.getItem("highScore")) {localStorage.setItem("highScore", game.score);};
-        window.location.search = "?score=" + game.score + "&full=" + window.location.search.substring(1).split("&")[1].split("=")[0] == "full" && varibles[0].split("=")[1] == "true";
+        window.location.search = "?score=" + game.score + "&full=" + (window.location.search.substring(1).split("&")[1].split("=")[0] == "full" && varibles[0].split("=")[1] == "true");
     },
 
     settings: function() {
