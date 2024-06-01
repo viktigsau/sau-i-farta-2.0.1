@@ -1,5 +1,8 @@
 const navnognommer = [
     {ar: 2024, navnNommer: [
+        {navn:"felix", nommer:"44026"},
+        {navn:"finn", nommer:"44034"},
+        {navn:"max", nommer:"44032"},
         {navn: "tia", nommer: "44021"},
         {navn: "tassen", nommer: "44046"},
         {navn: "krølle", nommer: "44048"},
@@ -29,12 +32,16 @@ function get(x) {
                 return navnognommer[ar].navnNommer[lam].nommer;
             };
             if (navnognommer[ar].navnNommer[lam].nommer == x) {
-                return navnognommer[ar].navnNommer[lam].navn;
+                return up(navnognommer[ar].navnNommer[lam].navn)
             };
         };
     };
     return "beklager finner ikke " + x
 };
+
+function up(x) {
+    return x.charAt(0).toUpperCase() + x.slice(1);
+}
 
 function run() {
     document.getElementById("output").innerText = get(document.getElementById("in").value)
@@ -49,7 +56,7 @@ function render(fillingId) {
         ar.appendChild(h1);
         for (let lamb = 0; lamb < navnognommer[currentAr].navnNommer.length; lamb++) {
             const currentlamb = document.createElement("p");
-            currentlamb.innerText = "🐑" + navnognommer[currentAr].navnNommer[lamb].navn + " _ " + navnognommer[currentAr].navnNommer[lamb].nommer + "🐑"
+            currentlamb.innerText = "🐑" + up(navnognommer[currentAr].navnNommer[lamb].navn) + " _ " + navnognommer[currentAr].navnNommer[lamb].nommer + "🐑"
             ar.appendChild(currentlamb);
         };
         document.getElementById(fillingId).appendChild(ar);
