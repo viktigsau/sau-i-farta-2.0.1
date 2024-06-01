@@ -37,11 +37,17 @@
     </header>
 
     <div class="content">
-        <h1>🐑404🐑 side ikkke funnet</h1>
+        <h1 id="hedding">🐑404🐑 finner ikke siden du lette etter</h1>
 
-        <div>siden du ville ha tak i finnes ikke</div>
+        <p>siden du ville ha tak i finnes ikke</p>
+        <p>hvis du mener dette er feil send oss en epost: <a id="mail" href="mailto:sau.i.farta.m@gmail.com?subject=&amp;body=" target="_blank">sau.i.farta.m@gmail.com</a></p>
 
-        <a href="index.html">🐑tilbake🐑</a>
+        <p><a href="index.html">🐑tilbake🐑</a></p>
+
+        <script>
+            document.getElementById("hedding").innerText = "🐑404🐑 finner ikke: " + window.location
+            document.getElementById("mail").href = "mailto:sau.i.farta.m@gmail.com?subject=404 " + window.location + "&amp;body="
+        </script>
         
         <div class="contactinfo" style="margin-top: 40px;">
             <div class="contactinfoSub">🐑epost:<a href="mailto:sau.i.farta.m@gmail.com?subject=&amp;body=" target="_blank">sau.i.farta.m@gmail.com</a></div>

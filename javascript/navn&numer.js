@@ -51,7 +51,7 @@ function render(fillingId) {
     for (let currentAr = 0; currentAr < navnognommer.length; currentAr++) {
         const ar = document.createElement("div");
         ar.classList.add("ar");
-        const h1 = document.createElement("h2");
+        const h1 = document.createElement("h1");
         h1.innerText = navnognommer[currentAr].ar;
         ar.appendChild(h1);
         for (let lamb = 0; lamb < navnognommer[currentAr].navnNommer.length; lamb++) {
