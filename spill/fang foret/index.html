@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sau i farta - fang foret</title>
+    <link rel="shortcut icon" href="../../bilder/sau i farta.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../bilder/sau i farta.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="player"></div>
+    <p id="debug"></p>
+    <dialog id="startscreen">
+        <h2>trykk på start for og starte</h2>
+        <p id="score"></p>
+        <button onclick="game.start()">start</button>
+        <button onclick="game.settings()">instillinger</button>
+        <a onclick="game.back()"><button>tilbake</button></a>
+    </dialog>
+    <dialog id="settings">
+        <p>vansklighets grad (høyere tall betyr lettere)</p>
+        <input type="number" name="vansklighets grad" id="diff" placeholder="vansklighets grad" value="500">
+        <button onclick="game.mainMenu()">tilbake</button>
+    </dialog>
+</body>
+</html>

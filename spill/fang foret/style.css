@@ -1,0 +1,58 @@
+#player{
+    width: 10vh;
+    height: 10vh;
+    top: 90vh;
+    background-image: url(../../bilder/sau2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+Body{
+    margin: 0px;
+    background-image: url(../../bilder/landskap.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.food{
+    width: 5vh;
+    height: 5vh;
+    top: -6vh;
+    background-image: url(../../bilder/høyball.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+div{
+    position: absolute;
+}
+
+button{
+    padding: 10px;
+    background-color: #1cc65d;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+input{
+    padding: 10px;
+    background-color: #1cc65d;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+dialog{
+    padding: 10px;
+    background-color: #C8FF00;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}

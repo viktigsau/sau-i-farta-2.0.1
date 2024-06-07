@@ -1,0 +1,16 @@
+#tilfeldigHøyBall{
+    position: fixed;
+    height: 5vh;
+    top: 90vh;
+    left: 83vw;
+    text-align: center;
+}
+
+#tilfeldigHøyBallBilde{
+    height: 80%;
+}
+
+#tilfeldigHøyBallText{
+    color: gold;
+    font-size: 4vh;
+}

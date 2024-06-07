@@ -1,0 +1,16 @@
+.contactinfo{
+    width: 100%;
+    height: fit-content;
+    background-color: #1cc65d;
+    margin: 0px;
+    border-top: black;
+    border-top: solid;
+    border-top-width: 2px;
+    padding-top: 10px;
+    padding-bottom: 50vh;
+    text-align: center;
+}
+
+.contactinfoSub{
+    padding: 10px;
+}

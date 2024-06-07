@@ -1,0 +1,78 @@
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 1000;
+    background-color: #1cc65d;
+    display: flex;
+    border-bottom: black;
+    border-bottom: 2px;
+    border-bottom: solid;
+    height: 10vw;
+}
+
+.sticky-header-sub {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#LogoName{
+    display: flex;
+    font-size: 2vw;
+}
+
+#logo{
+    width: 5vw;
+    height: 5vw;
+    margin-top: 2vw;
+    margin-right: 1vw;
+}
+
+.tabButton{
+    background-color: #1cc65d;
+    border: 2px;
+    border-bottom: solid;
+    border-color: black;
+    width: 100%;
+    font-size: 2vw;
+    margin-left: 1vw;
+}
+
+.tabButton:active{
+    border-color: #FFD153;
+}
+
+.content {
+    width: 100%;
+    margin-top: 10vw;
+    padding-top: 20px;
+}
+
+body{
+    background-color: #C8FF00;
+    margin: 0px;
+}
+
+.center{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    display: flex;
+}
+
+.typicButton{
+    background-color: #1cc65d;
+    padding: 20px;
+    font-size: 20px;
+    border-width: 2px;
+    border-style: 2px;
+    border-color: black;
+    border-radius: 20px;
+    margin: 20px;
+}
