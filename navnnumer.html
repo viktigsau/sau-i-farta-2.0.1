@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="msvalidate.01" content="5707228F5602368C0277A80E0652C37F" />
-    <title>sau i farta - hjem</title>
+    <title>sau i farta - navn og nommer</title>
     <link rel="shortcut icon" href="bilder/sau i farta.png" type="image/x-icon">
-    <link rel="stylesheet" href="style/home.css">
-    <link rel="stylesheet" href="style/contactinfo.css">
     <link rel="stylesheet" href="style/sticyheader.css">
-    <link rel="stylesheet" href="style/tilfeldigHøyBall.css">
-    <script>const left = ""; const right = "/navnnumer.html";</script>
-    <script src="javascript/scroll.js"></script>
-    <script src="javascript/dagertillamming.js"></script>
+    <link rel="stylesheet" href="style/navn&numer.css">
+    <link rel="stylesheet" href="style/contactinfo.css">
+    <script src="javascript/navn&numer.js"></script>
+    <script>const left = "/index.html"; const right = "/events.html";</script>
     <script src="javascript/tilfeldigHøyBall.js"></script>
+    <link rel="stylesheet" href="style/tilfeldigHøyBall.css">
+    <script src="javascript/scroll.js"></script>
 </head>
 <body>
     <header class="sticky-header">
@@ -23,11 +22,11 @@
                 <h2 id="name">sau i farta</h2>
             </div>
 
-            <a href="index.html"><button class="tabButton" style="border-color: #FFD153;">
+            <a href="index.html"><button class="tabButton">
                 <h2>hjem</h2>
             </button></a>
             
-            <a href="navn&numer.html"><button class="tabButton">
+            <a href="navn&numer.html"><button class="tabButton" style="border-color: #FFD153;">
                 <h2>navn og nummer</h2>
             </button></a>
             
@@ -48,34 +47,30 @@
     </div>
 
     <div class="content">
+        <div id="help">
+            <h2>hvordan å bruke</h2>
+            skriv inn et nommer eller navn i felted det står 🐑🐑 og trykk på søk
+        </div>
+        <div class="center">
+            <input id="in" type="text" value="" placeholder="🐑🐑">
+            <button onclick="run()" id="run">søk</button>
+            <div id="output"></div>
+        </div>
 
-        <h2 class="h2cont">🐑hjelp🐑</h2>
+        <div id="hvordanfungerernommera">
+            <h2>hva betyr nommeret til en sau?</h2>
+            De to første sifferene representerer det siste sifferet i året sauen ble født for exempel de to førse i 33004 er 33 altså 2023 men det kan også bety 2013 men grunnen til att det ikke har noe og si er det an en sau lever somregel ikke mer en 8 år. resten er hvor tidlig sauen ble født for exempel 33004 er nommer 4 til og bli født.
+        </div>
 
-        <p>vill du hvite hva et lam🐑 heter eller du vill finne ut om hvilket nommer et lam🐑 har. gå hit:</p>
-        <a href="navn&numer.html" class="cont">navn og nommer</a>
-
-        <p>vill du vite når neste gang vi drar et sted. gå hit:</p>
-        <a href="events.html" class="cont">arrangementer</a>
-
-        <h2 class="h2cont">funfact om sau🐑:</h2>
-        <p>🐑sau har bare tenner nede</p>
-        <p>🐑NKS er forkortelse for Norsk Kvit Sau</p>
-        <p>🐑Det er mellom 15000 og 20000 NKS søyer her i Norge</p>
-        <p>🐑sauer ble husdyr for første gang ca. 9200 år fvt.</p>
-
-        <!--<div id="tilLaming">
-            <h1 class="h2cont" id="dagertillamming"></h1>
-            <p id="disclamer">PS: dette er da det første lammet er forventet at kommer det er ikke sikkert at det er da lamminga starter men sirka da</p>
-        </div>-->
-
-        <a href="bilder.html"><button class="typicButton">bilder</button></a>
+        <div id="navnNom"></div>
+        
 
         <div class="contactinfo">
             <div class="contactinfoSub">🐑epost:<a href="mailto:sau.i.farta.m@gmail.com?subject=&amp;body=" target="_blank">sau.i.farta.m@gmail.com</a></div>
             <div class="contactinfoSub">🐑youtube:<a href="https://www.youtube.com/@sau_i_farta" target="_blank">sau i farta</a></div>
             <div class="contactinfoSub">🐑instagram:<a href="https://www.instagram.com/sau_i_farta?igsh=NnEyZWpsank0bjd6&utm_source=qr" target="_blank">sau_i_farta</a></div>
         </div>
-        <script>document.addEventListener("DOMContentLoaded", function() {getDays();});</script>
     </div>
+    <script>document.addEventListener("DOMContentLoaded", function() {render("navnNom")});</script>
 </body>
 </html>
