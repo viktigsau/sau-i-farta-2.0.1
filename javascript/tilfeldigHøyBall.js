@@ -12,7 +12,7 @@ function onClick() {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("tilfeldigHøyBall").addEventListener("click", onClick)
+    document.getElementById("tilfeldigHøyBall").addEventListener("click", onClick);
     try {
         newAmount = window.localStorage.getItem("tilfeldigHøyBall");
     }

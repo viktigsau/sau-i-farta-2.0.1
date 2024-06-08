@@ -6,17 +6,12 @@
 		<lastmod>2024-06-07</lastmod>
 	</url>
 	<url>
-		<loc>https://www.sauifarta.com/spill.html</loc>
+		<loc>https://www.sauifarta.com/404.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-06-07</lastmod>
+		<lastmod>2024-06-01</lastmod>
 	</url>
 	<url>
-		<loc>https://www.sauifarta.com/omevents.html</loc>
-		<priority>0.67</priority>
-		<lastmod>2024-06-07</lastmod>
-	</url>
-	<url>
-		<loc>https://www.sauifarta.com/navnnumer.html</loc>
+		<loc>https://www.sauifarta.com/bilder.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-06-07</lastmod>
 	</url>
@@ -26,18 +21,23 @@
 		<lastmod>2024-06-07</lastmod>
 	</url>
 	<url>
-		<loc>https://www.sauifarta.com/bilder.html</loc>
+		<loc>https://www.sauifarta.com/navnnumer.html</loc>
 		<priority>0.67</priority>
 		<lastmod>2024-06-07</lastmod>
 	</url>
 	<url>
-		<loc>https://www.sauifarta.com/404.html</loc>
+		<loc>https://www.sauifarta.com/omevents.html</loc>
 		<priority>0.67</priority>
-		<lastmod>2024-06-01</lastmod>
+		<lastmod>2024-06-07</lastmod>
+	</url>
+	<url>
+		<loc>https://www.sauifarta.com/spill.html</loc>
+		<priority>0.67</priority>
+		<lastmod>2024-06-07</lastmod>
 	</url>
 	<url>
 		<loc>https://www.sauifarta.com/spill/fang foret</loc>
 		<priority>0.33</priority>
-		<lastmod>2024-06-01</lastmod>
+		<lastmod>2024-06-08</lastmod>
 	</url>
 </urlset>
