@@ -1,6 +1,10 @@
 function onClick() {
+    let newAmount;
     try {
-        newAmount = window.localStorage.getItem("tilfeldigHøyBall");
+        newAmount = Number(window.localStorage.getItem("tilfeldigHøyBall"));
+        if (isNaN(newAmount)) {
+            newAmount = 0;
+        };
     }
     catch {
         newAmount = 0;
@@ -13,12 +17,4 @@ function onClick() {
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("tilfeldigHøyBall").addEventListener("click", onClick);
-    try {
-        newAmount = window.localStorage.getItem("tilfeldigHøyBall");
-    }
-    catch {
-        newAmount = 0;
-    };
-    document.getElementById("tilfeldigHøyBallText").innerText = newAmount;
-    window.localStorage.setItem("tilfeldigHøyBall", newAmount);
 });

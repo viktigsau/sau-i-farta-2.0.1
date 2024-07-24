@@ -1,6 +1,7 @@
 const events = [
     {ar: 2024, events: [
         {place: "gol bygdemuseum", date: [9, 5]},
+        {place: "hallingdal museum", date: [7, 7]},
         {place: "fårefestivalen", date: [21, 8]}
     ]},
     {ar: 2023, events: [
