@@ -1,4 +1,9 @@
 const navnognommer = [
+    {
+        ar: 2025, navnNommer: [
+            {navn: "rosenkål", nommer: "55015"}
+        ]
+    },
     {ar: 2024, navnNommer: [
         {navn:"felix", nommer:"44026"},
         {navn:"finn", nommer:"44034"},
